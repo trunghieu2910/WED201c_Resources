@@ -1,0 +1,52 @@
+/* Style for body */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+/* Style for header */
+header {
+  background-color: #4CAF50;
+  padding: 20px;
+}
+
+/* Style for nav (even nếu chưa có nav, có thể thêm sau) */
+nav {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
+
+/* Style for main */
+main {
+  background-color: #f9f9f9;
+  font-size: 18px;
+  padding: 20px;
+}
+
+/* Style for footer */
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* Style for list items */
+li {
+  display: inline-block;
+  width: 100px;
+  margin-right: 10px;
+}
+
+/* Style for h1 */
+h1 {
+  text-align: center;
+  font-family: 'Georgia', serif;
+  color: #333;
+}
+
+/* Style for paragraph */
+p {
+  line-height: 1.6;
+}
