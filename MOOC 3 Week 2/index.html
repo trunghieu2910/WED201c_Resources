@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Preview Example</title>
+  <style>
+    #image {
+      width: 400px;
+      height: 200px;
+      border: 2px solid #333;
+      margin-bottom: 20px;
+      background-color: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 10px;
+      font-weight: bold;
+    }
+    .preview {
+      width: 100px;
+      height: 60px;
+      margin: 5px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="image">Hover over an image below to display here.</div>
+
+  <img class="preview" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Forest View" onmouseover="upDate(this)" onmouseout="undo()">
+  <img class="preview" src="https://images.unsplash.com/photo-1493244040629-496f6d136cc3" alt="Mountain Lake" onmouseover="upDate(this)" onmouseout="undo()">
+  <img class="preview" src="https://images.unsplash.com/photo-1519817650390-64a93db511c5" alt="Snowy Peak" onmouseover="upDate(this)" onmouseout="undo()">
+
+  <script>
+    function upDate(previewPic) {
+      console.log("upDate triggered");
+      console.log("Image ALT:", previewPic.alt);
+      console.log("Image SRC:", previewPic.src);
+
+      const imageBox = document.getElementById("image");
+      imageBox.innerHTML = previewPic.alt;
+      imageBox.style.backgroundImage = `url('${previewPic.src}')`;
+      imageBox.style.backgroundSize = "cover";
+    }
+
+    function undo() {
+      const imageBox = document.getElementById("image");
+      imageBox.innerHTML = "Hover over an image below to display here.";
+      imageBox.style.backgroundImage = "url('')";
+    }
+  </script>
+</body>
+</html>
